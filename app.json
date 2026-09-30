@@ -1,25 +1,52 @@
 {
   "expo": {
-    "name": "hydroflow-app",
-    "slug": "hydroflow-app",
+    "name": "HydroFlow Fleet",
+    "slug": "hydroflow-fleet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hydroflow.fleet"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#006194",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.hydroflow.fleet"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#f7f9fb"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "HydroFlow uses the camera to capture proof-of-delivery photos."
+        }
+      ]
+    ],
+    "scheme": "hydroflow",
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
